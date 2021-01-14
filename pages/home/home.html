@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <h2>Daily Calorie Intake Calculator App</h2>
+  <p>
+    The calorie calculator can help you in determining how many calories should you eat a day - or what your starting point is if you want to gain or lose weight.
+    <br/><br/>
+    Source: <a href=": https://www.omnicalculator.com/health/calorie">: https://www.omnicalculator.com/health/calorie</a>
+  </p>
+
+  <img    
+    src="https://cdn.jsdelivr.net/gh/HansdeCastro/BMI-Calculator@master/logoV2.jpg"/>
+
+  <ion-item>
+    <ion-label>Height in meter: </ion-label>
+    <ion-input type="number"[(ngModel)]="height"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Weight in kilogram: </ion-label>
+    <ion-input type="number"[(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+  <button ion-button color="secondary" (click)="calculateBMI()">CALCULATE</button>
+  
+  <ion-item *ngIf="bmi">
+    <h2 class="heading2">Your BMI is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+  
+    </ion-item>
+    
+  </ion-content>
+
